@@ -13,7 +13,7 @@ const output = {
 
 
 function myFunction() {
-    var input = prompt("Please enter your name", "Enter a Number");
+    var input = prompt("Please enter a number", "Enter a Number");
     if (input != null) {
         document.getElementById("demo").innerHTML =
             "You need " + output.metal * input + ' metal frags <br>' +
