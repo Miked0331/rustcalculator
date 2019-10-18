@@ -20,7 +20,8 @@ function myFunction() {
             "You need " + output[3].cloth * input + ' cloth <br>' +
             "You need " + output[4].animal_fat * input + ' animal fat <br>' +
             "You need " + output[5].charcoal * input + ' charcoal <br>' +
-            "You need " + output[6].explosives * input + ' explosives <br>'
+            "You need " + output[6].explosives * input + ' explosives <br>' +
+            "To make " + c4 * input + " C4"
     }
     else {
         alert("You have not entered a number!, try again.")
@@ -38,11 +39,20 @@ const output2 = [
     { animal_fat: rockets * 24 }
 ]
 
-const myFunction2 = () => {
-    const input = prompt("How many rockets do you need to craft?", "Enter Number");
-    if (input != null) {
+function myFunction2() {
+    var input2 = prompt("How many rockets do you need to craft?", "Enter Number");
+    if (input2 != null) {
         document.getElementById("rockets").innerHTML =
             "You need <br>" +
-            output2[0].metal
+            output2[0].metal * input2 + " Metal Frags <br>" +
+            output2[1].pipes * input2 + " Pipes <br>" +
+            output2[2].sulfur * input2 + " Sulfur <br>" +
+            output2[3].charcoal * input2 + " Charcoal <br>" +
+            output2[4].cloth * input2 + " Cloth <br>" +
+            output2[5].animal_fat * input2 + " Animal Fat <br>" +
+            "To make " + rockets * input2 + " rocket(s)!"
+    }
+    else {
+        alert("You did not enter a number, try again!")
     }
 }
