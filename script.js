@@ -14,14 +14,15 @@ function myFunction() {
     var input = prompt("Please enter a number", "Enter a Number");
     if (input != null) {
         document.getElementById("c4").innerHTML =
-            "You need " + output[0].metal * input + ' metal frags <br>' +
-            "You need " + output[1].tech * input + ' tech trash <br>' +
-            "You need " + output[2].sulf * input + ' sulfur <br>' +
-            "You need " + output[3].cloth * input + ' cloth <br>' +
-            "You need " + output[4].animal_fat * input + ' animal fat <br>' +
-            "You need " + output[5].charcoal * input + ' charcoal <br>' +
-            "You need " + output[6].explosives * input + ' explosives <br>' +
-            "To make " + c4 * input + " C4"
+            "You need <br>" +
+            output[0].metal * input + ' metal frags <br>' +
+            output[1].tech * input + ' tech trash <br>' +
+            output[2].sulf * input + ' sulfur <br>' +
+            output[3].cloth * input + ' cloth <br>' +
+            output[4].animal_fat * input + ' animal fat <br>' +
+            output[5].charcoal * input + ' charcoal <br>' +
+            output[6].explosives * input + ' explosives <br>' +
+            c4 * input + " C4"
     }
     else {
         alert("You have not entered a number!, try again.")
