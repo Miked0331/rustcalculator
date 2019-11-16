@@ -1,3 +1,10 @@
+function thousands_separators(num) {
+    var num_parts = num.toString().split(".");
+    num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return num_parts.join(".");
+}
+
+
 const c4 = 1;
 
 const output = [
@@ -15,14 +22,14 @@ function myFunction() {
     if (input != null) {
         document.getElementById("c4").innerHTML =
             "You need <br>" +
-            output[0].metal * input + ' metal frags <br>' +
-            output[1].tech * input + ' tech trash <br>' +
-            output[2].sulf * input + ' sulfur <br>' +
-            output[3].cloth * input + ' cloth <br>' +
-            output[4].animal_fat * input + ' animal fat <br>' +
-            output[5].charcoal * input + ' charcoal <br>' +
-            output[6].explosives * input + ' explosives <br>' +
-            c4 * input + " C4"
+            (thousands_separators(output[0].metal * input)) + ' metal frags <br>' +
+            (thousands_separators(output[1].tech * input)) + ' tech trash <br>' +
+            (thousands_separators(output[2].sulf * input)) + ' sulfur <br>' +
+            (thousands_separators(output[3].cloth * input)) + ' cloth <br>' +
+            (thousands_separators(output[4].animal_fat * input)) + ' animal fat <br>' +
+            (thousands_separators(output[5].charcoal * input)) + ' charcoal <br>' +
+            (thousands_separators(output[6].explosives * input)) + ' explosives <br>' +
+            "To make " + c4 * input + " C4!"
     }
     else {
         alert("You have not entered a number!, try again.")
@@ -40,17 +47,19 @@ const output2 = [
     { animal_fat: rockets * 24 }
 ]
 
+
+
 function myFunction2() {
     var input2 = prompt("How many rockets do you need to craft?", "Enter Number");
     if (input2 != null) {
         document.getElementById("rockets").innerHTML =
             "You need <br>" +
-            output2[0].metal * input2 + " Metal Frags <br>" +
-            output2[1].pipes * input2 + " Pipes <br>" +
-            output2[2].sulfur * input2 + " Sulfur <br>" +
-            output2[3].charcoal * input2 + " Charcoal <br>" +
-            output2[4].cloth * input2 + " Cloth <br>" +
-            output2[5].animal_fat * input2 + " Animal Fat <br>" +
+            (thousands_separators(output2[0].metal * input2)) + " Metal Frags <br>" +
+            (thousands_separators(output2[1].pipes * input2)) + " Pipes <br>" +
+            (thousands_separators(output2[2].sulfur * input2)) + " Sulfur <br>" +
+            (thousands_separators(output2[3].charcoal * input2)) + " Charcoal <br>" +
+            (thousands_separators(output2[4].cloth * input2)) + " Cloth <br>" +
+            (thousands_separators(output2[5].animal_fat * input2)) + " Animal Fat <br>" +
             "To make " + rockets * input2 + " rocket(s)!"
     }
     else {
