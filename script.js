@@ -121,7 +121,7 @@ const output5 = [
 ]
 
 function myFunction5() {
-    var input5 = prompt("How many satchels ?", "Enter Number");
+    var input5 = prompt("How much gp ?", "Enter Number");
     if (input5 != null) {
         document.getElementById("gp").innerHTML =
             "You need <br>" +
@@ -129,6 +129,34 @@ function myFunction5() {
             (thousands_separators(output5[1].charcoal * input5)) + " Charcoal <br>" +
             
             "To make " + gp * input5 + " gun powder!"
+    }
+    else {
+        alert("You did not enter a number, try again!")
+    }
+}
+
+const sheet_door = 1;
+
+const o1 = [
+    { c4: sheet_door * 1 },
+    { rocket: sheet_door * 2 },
+    { hv: sheet_door*  5 },
+    { satchel: sheet_door*  4 },
+    { bean: sheet_door*  18 }
+]
+
+function function1() {
+    var i1 = prompt("How many ?", "Enter Number");
+    if (i1 != null) {
+        document.getElementById("sheet_door").innerHTML =
+            "You need <br>" +
+            (thousands_separators(o1[0].c4 * i1)) + " c4 <br>" +
+            (thousands_separators(o1[1].rocket * i1)) + " Rockets <br>" +
+            (thousands_separators(o1[2].hv * i1)) + " High Velocity Rockets <br>" +
+            (thousands_separators(o1[3].satchel * i1)) + " Satchels <br>" +
+            (thousands_separators(o1[4].bean * i1)) + " Bean Cans <br>" +
+            
+            "To break " + sheet_door * i1 + " sheet doors!"
     }
     else {
         alert("You did not enter a number, try again!")
