@@ -88,3 +88,27 @@ function myFunction3() {
         alert("You did not enter a number, try again!")
     }
 }
+
+const satchel = 1;
+
+const output4 = [
+    { rope: satchel * 1 },
+    { bean: satchel * 4 },
+    { stash: satchel * 1}
+]
+
+function myFunction4() {
+    var input4 = prompt("How many satchels ?", "Enter Number");
+    if (input4 != null) {
+        document.getElementById("satchel").innerHTML =
+            "You need <br>" +
+            (thousands_separators(output4[0].rope * input4)) + " Rope <br>" +
+            (thousands_separators(output4[1].bean * input4)) + " Bean Cans <br>" +
+            (thousands_separators(output4[2].stash * input4)) + " Stashes <br>" +
+            
+            "To make " + satchel * input4 + " satchels!"
+    }
+    else {
+        alert("You did not enter a number, try again!")
+    }
+}
