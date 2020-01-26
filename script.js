@@ -112,3 +112,25 @@ function myFunction4() {
         alert("You did not enter a number, try again!")
     }
 }
+
+const gp = 1;
+
+const output5 = [
+    { sulfur: gp * 2 },
+    { charcoal: gp * 3 },
+]
+
+function myFunction5() {
+    var input5 = prompt("How many satchels ?", "Enter Number");
+    if (input5 != null) {
+        document.getElementById("gp").innerHTML =
+            "You need <br>" +
+            (thousands_separators(output5[0].sulfur * input5)) + " Sulfur <br>" +
+            (thousands_separators(output5[1].charcoal * input5)) + " Charcoal <br>" +
+            
+            "To make " + gp * input5 + " gun powder!"
+    }
+    else {
+        alert("You did not enter a number, try again!")
+    }
+}
