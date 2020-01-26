@@ -47,8 +47,6 @@ const output2 = [
     { animal_fat: rockets * 24 }
 ]
 
-
-
 function myFunction2() {
     var input2 = prompt("How many rockets do you need to craft?", "Enter Number");
     if (input2 != null) {
@@ -61,6 +59,30 @@ function myFunction2() {
             (thousands_separators(output2[4].cloth * input2)) + " Cloth <br>" +
             (thousands_separators(output2[5].animal_fat * input2)) + " Animal Fat <br>" +
             "To make " + rockets * input2 + " rocket(s)!"
+    }
+    else {
+        alert("You did not enter a number, try again!")
+    }
+}
+
+const ammo = 1;
+
+const output3 = [
+    { metal: ammo * 10 },
+    { sulfur: ammo * 10 },
+    { gunPowder: ammo * 20}
+]
+
+function myFunction3() {
+    var input3 = prompt("How much explosive ammo ?", "Enter Number");
+    if (input3 != null) {
+        document.getElementById("ammo").innerHTML =
+            "You need <br>" +
+            (thousands_separators(output3[0].metal * input3)) + " Metal Frags <br>" +
+            (thousands_separators(output3[1].sulfur * input3)) + " Sulfur <br>" +
+            (thousands_separators(output3[2].gunPowder * input3)) + " Gun Powder <br>" +
+            
+            "To make " + ammo * input3 + " explosive ammo!"
     }
     else {
         alert("You did not enter a number, try again!")
