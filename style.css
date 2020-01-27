@@ -16,8 +16,20 @@ button {
   font-size: .9em;
 }
 
-.logo img {
-  max-width: 50%;
+.logo {
+  text-align: center;
+}
 
-  height: auto;
+
+@media only screen and (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+  .grid-main {
+    display: block;
+  }
 }
