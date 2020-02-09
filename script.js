@@ -142,7 +142,8 @@ const o1 = [
     { rocket: sheet_door * 2 },
     { hv: sheet_door*  5 },
     { satchel: sheet_door*  4 },
-    { bean: sheet_door*  18 }
+    { bean: sheet_door*  18 },
+    {e_ammo: sheet_door * 64}
 ]
 
 function function1() {
@@ -155,6 +156,7 @@ function function1() {
             (thousands_separators(o1[2].hv * i1)) + " High Velocity Rockets <br>" +
             (thousands_separators(o1[3].satchel * i1)) + " Satchels <br>" +
             (thousands_separators(o1[4].bean * i1)) + " Bean Cans <br>" +
+            (thousands_separators(o1[5].e_ammo * i1)) + " Explosive Rounds <br>" +
             
             "To break " + sheet_door * i1 + " sheet doors!"
     }
